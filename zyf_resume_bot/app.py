@@ -36,6 +36,7 @@ if question:
         model="gpt-3.5-turbo", 
         messages=[{"role": "user", "content": prompt}],
         temperature=0.4,
+        max_tokens=600,
     )
     st.markdown("### 回答：")
     st.write(response.choices[0].message.content)
